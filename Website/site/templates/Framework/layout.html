@@ -1,0 +1,24 @@
+{% extends "Framework/base.html" %}
+{% import "Framework/views.html" as views %}
+
+{% block header %}
+    {{ views.create_header(vars.logo, vars.menuitems, vars.banner) }}
+{% endblock %}
+
+{% block content %}
+    {% include 'Framework/content{}.inc'.format(vars.columns)%}
+{% endblock %}
+
+{% block content_next %}
+    {% include 'Framework/content_next{}.inc'.format(vars.secondrowcols)%}
+{% endblock %}
+
+{% block footer %}
+	{% include 'Framework/footer{}.inc'.format(vars.footer_columns)%}
+{% endblock %}
+
+{% block copyright %}
+    {{ views.create_copyright(vars.get('copyright', "") |safe) }}
+{% endblock %}
+
+

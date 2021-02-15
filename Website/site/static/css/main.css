@@ -1,0 +1,157 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#booking-form {
+    text-align:center;
+    min-height: 476px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#datepicker{
+    display: inline-block;
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #00315e;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: #5dabf8;
+}
+
+
+
+.content_area {
+    /*background-color: azure;*/
+    margin-top: 20px;
+    /*border: solid 1px #80808026;*/
+    /*border-radius: 20px;*/
+}
+
+#content-down {
+    margin-bottom: 20px;
+}
+
+.top_left {
+    padding: 2%;
+    background-color: #edf756;
+    color: brown;
+}
+
+.top_main{
+    padding: 2%;
+    /*background-color: #51e2f5;*/
+    border: 1px solid #077eec30;
+}
+
+.top_right{
+    padding: 2%;
+    background-color: #edf756;
+}
+
+.bottom_left {
+    padding: 2%;
+    background-color: #077eec;
+    color: white;
+
+}
+
+.bottom_main{
+    padding: 2%;
+    background-color: #00315e;
+    color: white;
+}
+
+.bottom_right{
+    padding: 2%;
+    background-color: #aaaaa7;
+}
+
+.footer_main {
+    background-color: #ffa8B6;
+    /*padding: 2%;*/
+}
+
+.footer-col{
+    background-color: #d5e8f2;
+    border: solid 1px #ffffff;
+    padding: 2%;
+}
+.copyright {
+    font-size: small;
+    text-align: center;
+    background-color: #077eec;
+    margin-top: 20px;
+    color: white;
+}
+
+.social-bar{
+    text-align: left;
+}
+.fab{
+    color: #077eec;
+}
+
+.fab:hover{
+    color: #5dabf8;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.carousel .carousel-item img {
+  max-height: 500px;
+  min-width: auto;
+}
+
+.copyright > a {
+    color: white;
+}

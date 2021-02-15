@@ -1,0 +1,21 @@
+Primarily a clean looking layout - I've included the selection of logos.
+I'm tending towards number 3  - it'll look good on a vinyl label.
+
+pages:
+All content is Lorem.
+I'd like to see if the images in the banner can be autosized/centered/homogenised in some way so the banner/carousel doesn't force the page to resize ?
+I've fixed the slide sequence.
+I'm planning on hooking the "Buy" page directly in to paypal - it'll only be selling the lock sets for those with DIY skills.
+
+
+The most complicated bit is the booking form - all data goes through a rest api on the server.
+I've hooked the backend into the local council to retrieve the bin collection days so the site will only allow booking the day after the bins are emptied.
+Address resolution is done via postcode.
+User enters postcode, backend retrieves address options from council.
+User confirms address, backend queries for collection date.
+User can then select a date for installation of the lock, or select "next available"
+
+The actual booking is for a time-slot on that day, which the user needs to select.
+
+I've rearranged things a bit to make it more like traditional inheritance.
+At some stage I'll move the site config into a json file.

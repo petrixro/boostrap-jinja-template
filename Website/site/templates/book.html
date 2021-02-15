@@ -1,0 +1,53 @@
+{% extends "Framework/layout.html" %}
+
+{% macro page_tag() %}
+Booking
+{% endmacro %}
+
+{% block head %}
+    <script src="/static/js/main.js"></script>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
+
+
+{% macro content_main() %}
+To Book an appointment for a professional installation, please fill in your details below.
+{% endmacro %}
+
+
+
+{% macro content_next_main() %}
+<div id="booking-form">
+    <div id="select-postcode">
+        <h1 style="text-align: center"> Enter your postalcode </h1>
+        <div class="input-group mb-3">
+            <input id="zipcode" type="number" class="form-control" placeholder="Your Postalcode"
+                   aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="checkAdress()">Check Adress</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro footer_main() %}
+Footer main content
+{% endmacro %}
+
+{% macro footer_left() %}
+	{% block social %}
+	{{ views.create_social(vars.social) }}
+	{% endblock %}
+{% endmacro %}
+
+{% macro footer_main() %}
+    Footer Main
+{% endmacro %}
+
+{% macro footer_right() %}
+    {{ views.create_contacts(vars.contacts) }}
+{% endmacro %}

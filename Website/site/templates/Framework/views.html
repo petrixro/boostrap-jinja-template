@@ -1,0 +1,157 @@
+
+<!--macro to create the banner-->
+{% macro create_banner(images) %}
+<!--banner-->
+<div class="container-fluid">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for index in range(images|length) %}
+            {% if index == (images|length)%}
+            {% set slide_to = 0 %}
+            {% else %}
+            {% set slide_to = index+1 %}
+            {% endif %}
+            <li data-target="#carousel" data-slide-to="{{ slide_to }}" {% if index == 0 %}class="active" {% endif %}></li>
+            {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+            {% for index in range(images|length) %}
+            <div class="carousel-item {% if index == 0 %}active{% endif %}">
+                <img src="{{ images[index] }}" class="d-block mx-auto img-responsive" alt="Slide {{ index + 1 }}">
+            </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!--banner ends-->
+{% endmacro %}
+
+
+
+<!--macro to create the whole header-->
+{% macro create_header(logo, menuitems, banner) %}
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="">
+        <img src="{{ logo }}" alt="" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <!--menu items -->
+        <ul class="navbar-nav ml-auto">
+        {% for key in menuitems %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ key }}">{{ menuitems[key].name }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+            <!--menu items ends -->
+    </div>
+</nav>
+{{ create_banner(banner) }}
+{% endmacro %}
+
+<!--macro to create the footer->
+{% macro create_footer(footer_cols) %}
+<!--footer-->
+<div class="footer_main">
+    <div class="row">
+        {% for i in range(footer_cols) %}
+            <div class="col-sm footer-col" id="footer-{{ i + 1 }}">
+                Footer col number {{ i + 1 }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<!--footer ends-->
+{% endmacro %}
+
+
+<!--macro to create the copyright-->
+{% macro create_copyright(copy) %}
+    <!--copyright-->
+    <div class="copyright">
+        {{ copy }}
+    </div>
+<!--copyright ends-->
+{% endmacro %}
+
+<!--macro to create cardsr-->
+{% macro create_cards(cards) %}
+{% for card in cards %}
+<div class="card" style="width: 18rem;">
+    <img src="{{ card.image_path }}" class="card-img-top" alt="{{ card.image_alt }}">
+    <div class="card-body">
+        <h5 class="card-title">{{ card.card_title }}</h5>
+        <p class="card-text">{{ card.card_text }}</p>
+        <a href="{{ card.button_link }}" class="btn btn-primary">{{ card.button_text }}</a>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+
+<!--macro to create the social icons-->
+{% macro create_social(websites) %}
+<!--social-->
+<div class="social-bar">
+    <h4>Follow us</h4>
+    {% for item in websites %}
+        <a href="#" target="_blank"><i class="fab fa-{{ item }} fa-2x"></i></a>
+    {% endfor %}
+</div>
+<!--social ends-->
+{% endmacro %}
+
+
+<!--macro to create a timeline-->
+{% macro create_timeline(title, timelines) %}
+    <div class="container-fluid timeline-{{ title }}">
+    <h4>{{ title }}</h4>
+			<ul class="timeline">
+                {% for timeline in timelines %}
+				<li>
+                    <b>{{ timeline.title}}</b>
+                    <p class="float-right">{{ timeline.date }}</p>
+					<p>{{ timeline.text }}</p>
+				</li>
+                {% endfor %}
+			</ul>
+    </div>
+{% endmacro %}
+
+<!--macro to create progress bars-->
+{% macro create_progress_bars(bars) %}
+    <div class="container-fluid progress-bars">
+    {% for bar in bars %}
+        <p>{{ bar.name }}</p>
+    <div class="progress">
+        <div class="progress-bar {{ bar.name }}-progress" role="progressbar" aria-valuenow="{{ bar.value }}"
+             aria-valuemin="0" aria-valuemax="100" style="width: {{ bar.value }}%;">
+        {{ bar.value }}%
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+
+<!--macro to create contacts-->
+{% macro create_contacts(contact_list) %}
+    <div class="container-fluid contacts">
+    <h4>Contact us</h4>
+    {% for contact in contact_list %}
+        {{ contact | safe }}
+    {% endfor %}
+    </div>
+{% endmacro %}

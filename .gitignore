@@ -1,0 +1,59 @@
+# Object files
+.svn
+.idea
+
+*.o
+*.ko
+
+# Gcc dependency-tracking files
+*.d
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# python
+bindings/python/build/
+*.egg-info
+*.pyc
+
+# Specific auto-generated build files
+/.tox
+/__pycache__
+/build
+/dist
+/pefile.egg-info
+
+# vim tmp file
+*.swp
+*~
+
+*.s
+.DS_Store
+
+# VisualStudio
+ProjectUpgradeLog.log
+Debug/
+Release/
+ipch/
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.backup
+*.VC.db
+*.VC.opendb
+
+artifacts
+Artifacts
