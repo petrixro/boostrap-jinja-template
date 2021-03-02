@@ -1,19 +1,24 @@
-the docker instance will run with the folowing mappings:
-"./site" maps to "/opt/www" \
-"./site-python" maps to "/opt/python"
+## Boostrap Flask/Jinja2 Template Generator
+A smalltemplate generator built in Flask.
+The project is built on Docker.
+Run build.sh first, then run.sh
 
-"/opt/python" is automatically added to the python path.
 
-the mapping below allows the instance to access your local mysql install.
-"/run/mysqld/mysqld.sock" maps to "/run/mysqld/mysqld.sock"
-
-Edit run_sample.sh as required.
+## Homepage
 ![Screenshot](https://i.ibb.co/z6fBbdN/Screenshot-from-2021-03-02-08-14-56.png)
+
+## 2 Rows Template
 ![Screenshot](https://i.ibb.co/xJ6fh9W/Screenshot-from-2021-03-02-08-15-45.png)
+
+## Full Width
 ![Screenshot](https://i.ibb.co/fnL8t8F/Screenshot-from-2021-03-02-08-17-34.png)
+
+## A custom jQuery calendar booking form that communicate with the endpoints from Flask to get available dates and hours for a specific address
 ![Screenshot](https://i.ibb.co/Br8kZp0/Screenshot-from-2021-03-02-08-18-53.png)
 ![Screenshot](https://i.ibb.co/QF7z3ZR/Screenshot-from-2021-03-02-08-19-08.png)
 ![Screenshot](https://i.ibb.co/CnyyfZn/Screenshot-from-2021-03-02-08-19-28.png)
+
+## Small look on the variables
 ![Screenshot](https://i.ibb.co/kc8G2C4/Screenshot-from-2021-03-02-08-20-26.png)
 
 
