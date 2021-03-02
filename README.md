@@ -1,5 +1,5 @@
-## Boostrap Flask/Jinja2 Template Generator
-A smalltemplate generator built in Flask.
+## Bootsrap Flask/Jinja2 Template Generator
+A small template generator built in Flask.
 The project is built on Docker.
 Run build.sh first, then run.sh
 You can change all the Menu Items, customize number of cols in a row, even the banner images or the contact details and there are generated the new ones.
