@@ -2,7 +2,7 @@
 A small template generator built in Flask.\
 The project is built on Docker.\
 Run build.sh first, then run.sh\
-You can change all the Menu Items, customize number of cols in a row, even the banner images or the contact details and there are generated the new ones.\
+You can change all the Menu Items, customize number of cols in a row, even the banner images or the contact details and there are generated the new ones.
 
 ## Homepage
 ![Screenshot](https://i.ibb.co/z6fBbdN/Screenshot-from-2021-03-02-08-14-56.png)
