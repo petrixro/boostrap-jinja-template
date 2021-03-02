@@ -1,4 +1,4 @@
-## Bootsrap Flask/Jinja2 Template Generator
+## Bootstrap Flask/Jinja2 Template Generator
 A small template generator built in Flask.
 The project is built on Docker.
 Run build.sh first, then run.sh
